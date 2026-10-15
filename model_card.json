@@ -1,0 +1,54 @@
+{
+  "best_model": {
+    "name": "Random Forest (tuned)",
+    "feature_set": "B: + cheap sensors",
+    "features": [
+      "hour",
+      "dow",
+      "season",
+      "is_weekend",
+      "is_rush",
+      "is_holiday",
+      "T",
+      "RH",
+      "AH",
+      "PT08.S1(CO)",
+      "PT08.S2(NMHC)",
+      "PT08.S3(NOx)",
+      "PT08.S4(NO2)",
+      "PT08.S5(O3)"
+    ],
+    "test_RMSE_mg_m3": 0.49,
+    "test_R2": 0.858,
+    "test_MAE_mg_m3": 0.334
+  },
+  "urban_factors_model": {
+    "name": "Random Forest",
+    "feature_set": "A: urban factors",
+    "features": [
+      "hour",
+      "dow",
+      "season",
+      "is_weekend",
+      "is_rush",
+      "is_holiday",
+      "T",
+      "RH",
+      "AH"
+    ],
+    "test_RMSE_mg_m3": 1.031,
+    "test_R2": 0.37
+  },
+  "target": "CO(GT)",
+  "target_units": "mg/m3",
+  "train_period": [
+    "2004-03-10 18:00:00",
+    "2005-01-28 09:00:00"
+  ],
+  "test_period": [
+    "2005-01-28 10:00:00",
+    "2005-04-04 14:00:00"
+  ],
+  "data_source": "UCI ML Repository, Air Quality (ID 360), DOI 10.24432/C59K5F, CC BY 4.0",
+  "random_state": 42
+}
